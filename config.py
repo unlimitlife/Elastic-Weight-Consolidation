@@ -16,22 +16,12 @@ method_config = {
     "ewc++": {
         "method": "ewc++",
         "process_list":
-            [{"epochs": 120, "balance_finetune": False,
-              "optimizer": selector.optimizer.SGD(lr=0.1, momentum=0.9, weight_decay=0),
-              "scheduler": selector.scheduler.MultiStepLR([84,108], gamma=0.1)}],
-        "package": "method.ewc++",
-    }
-}
-"""
-    "ewc++": {
-        "method": "ewc++",
-        "process_list":
-            [{"epochs": 60, "balance_finetune": False,
+            [{"epochs": 70, "balance_finetune": False,
               "optimizer": selector.optimizer.Adam(lr=1e-3, betas=(0.9, 0.999)),
               "scheduler": selector.scheduler.StepLR(step_size=70, gamma=0.1)}],
         "package": "method.ewc++",
     }
-"""
+}
 data_config = {
     "mnist": {
         "dataset": "mnist",
